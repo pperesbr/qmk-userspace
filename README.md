@@ -8,7 +8,7 @@ Firmware is built by GitHub Actions on every push. No local toolchain required.
 
 | Keyboard | Controller | Keymap |
 |---|---|---|
-| Sofle v2 (`sofle/rev1`) | RP2040 Pro Micro (16 MB) | `soflev2` |
+| Sofle v2 (`sofle/rev1`) | RP2040 Pro Micro (16 MB) | `pperesbr` |
 
 ## Hardware — Sofle v2
 
@@ -29,7 +29,7 @@ Firmware is built by GitHub Actions on every push. No local toolchain required.
 └── keyboards/
     └── sofle/
         └── keymaps/
-            └── soflev2/
+            └── pperesbr/
                 ├── keymap.c                # layers, encoders, OLED
                 ├── rules.mk                # features + RP2040 converter
                 └── config.h                # split, bootloader, tapping
@@ -49,7 +49,7 @@ Build targets (`qmk.json`):
 {
   "userspace_version": "1.0",
   "build_targets": [
-    ["sofle/rev1", "soflev2"]
+    ["sofle/rev1", "pperesbr"]
   ]
 }
 ```
@@ -129,8 +129,8 @@ Only needed for faster builds or editor support. Zed/clangd shows false errors w
 brew install qmk/qmk/qmk
 qmk setup
 qmk config user.overlay_dir="$(pwd)"
-qmk compile -kb sofle/rev1 -km soflev2
-qmk generate-compilation-database -kb sofle/rev1 -km soflev2
+qmk compile -kb sofle/rev1 -km pperesbr
+qmk generate-compilation-database -kb sofle/rev1 -km pperesbr
 ```
 
 Symlink the generated `compile_commands.json` into the repo root so clangd finds it.
